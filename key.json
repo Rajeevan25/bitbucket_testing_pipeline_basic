@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "ivedha-training-409717",
+  "private_key_id": "8322b7c7f20dc9840da3060949841ff3521c6086",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDQlgMauqbLYABO\nCpsPJF5SeLh9azVqFr6NG3dg7PacAnr9okCj7LXn7/f14VHwPjaq5NbNSSz81B2e\nwDnBLbfXX9yD1JjlOrEcPxzAP9t/RzX+bi9u3aUeTsPrJ6wq/VsaqU2TwS8SmakJ\nNOuIrJYnPYdob6Hv9DoLaBa43j+sBAWoWhhHd3JsM/UCmIGmw4dOziYQQTAEjDnE\ngA8us8mJmYIoUsvnOIdXZHmvEw3UVojbYYJIjlT4kzt4CtfjGrdLdLbxwpTdcd59\nj8SXzAfjQzzVdplrfXcBTmIIoiPbD2sJmdjk+hkbEKsF1G0xNHJkofWdPpX0J6mj\nhlJRmpSfAgMBAAECggEARD5wcZRT8gJM1zu9E60wdwcsRUyIQ1eBrKUp37pnzQ86\nsjUdtQRDV8k5dWbs6g9Qz4TjinLAl0/HCSOXQc71cS/Z8//grk8Pl1BG1deOtwvT\nbJUcS8eUuF/I1e069S3DWuu9h/QStKE1nt+DmEnvLpOA8/hiISHkw8qgdIeyiVKI\nUAzZ+hqab/fWOdC8xrRSgRZbXjqXiYswD1mhyQGUYVHKP/nfSqZcHZ1f5McViEmg\nKokNKNrBjLys4REmDyBTZkqtS4aLRtPy5Sbo/J5Jj/jMr7AdOhhMF1+XUZuutVkJ\niN31b30CmTguyeMExYQdugGHBPKVtPqNRe3SUBNhMQKBgQDsU/JI9DDT0xJcmBND\nGrB+o+4oA5rOCvkNd7vAy7OblqvBsCYeFpNUQvVV8SgRxuifQefjNYx5XHvJbMBT\ndMV9HkiEGb6KY3pfJ8XKPxYwLDaP55FIzNNu0+e1Y817l7mS+BP9bfTqqOqj9xmp\nwS0sQO1HOG4/LjOp3IuXgp516wKBgQDh8uVvAy5ODLMDKBRRAwX1PM8tM8NftHA4\nR8eo1JLlQKB8j+h9t76MmaI+xTaIM72Efx9pnJhuFfCyCozu+RXlQfInvOpvCSaW\nvySF5biDzahzO7rM7ZZ/SV3Op/6bmF6GdA0TrmOMNqh/ts/K236OM/O1N6QDTLg0\nZkJKUZprHQKBgQDVK4eRbMqaV3rpkLdXQTzQjrfk2hOKJXWvQ0BVUKkLACafiG9p\nln2AdQFtayD0oBH2jXFIjmXOlrCF6RW2cc8t4+IPXlVz6PVZ3btYif1OqKLyvTNc\nkn1pK7WG9aZFBH/85M7LO6K/BGzaR6qbZ8eCcnJVWr5/OQKbBnfXy5d5zwKBgDfi\nDG7deYliSLAiLIww1DtoU9FZORwlk4/H6RDPqpk617aXHShi1qUNpnwh6K/dJCVu\nD4XebjDkCkjupRbB0nGGUu8TIWRe/gVQtybKv00SA3SktDnVFWDb83CWSjmPgOl+\nMHHKsuJN7nTP8Sq6CN4A6WjLnywVwIVtOT4KWsfdAoGBAMTgJJSMq6Vuz3gCccBm\n8zkkY+yTgpH3fvgM60lgtejwKiRqj4C5rYazEuAh1E0OmciVfNnsnc4D2gr2dPVB\n8bNzlLzvI2au76Ad9y6szaI2e+3nOgqRMFnRZ0gy+2aeGDGZx1XjKjZuJ7CcWpji\nHLtQdGO+n7b1ax3qLu+a2yyh\n-----END PRIVATE KEY-----\n",
+  "client_email": "cicd-training@ivedha-training-409717.iam.gserviceaccount.com",
+  "client_id": "108809071095006025789",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/cicd-training%40ivedha-training-409717.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

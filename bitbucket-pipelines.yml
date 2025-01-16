@@ -1,0 +1,60 @@
+options:
+  docker: true
+
+image: atlassian/default-image:3
+
+pipelines:
+  default:
+    - step:
+        name: build          
+        caches:
+          - docker
+        services:
+          - docker
+        script:
+          - echo "Start Docker building...."  
+          - docker build -t app01 .    
+          - echo "completed Docker building...."  
+          - docker images
+          - docker image tag app01 rajeevany/sample_app2:1.0  
+          - echo "login docker hub"
+          - echo $docker_hub_password | docker login -u rajeevany --password-stdin            
+          - docker push rajeevany/sample_app2:1.0 
+
+    - step:
+        name: upload to GCR          
+        image: google/cloud-sdk:latest 
+        script:
+          - docker pull rajeevany/sample_app2:1.0  
+          #gcr docker login
+          - echo $GCP_SERVICE_ACCOUNT_KEY | docker login -u _json_key --password-stdin https://gcr.io #login to gcr.io with your service account key
+          - docker tag rajeevany/sample_app2:1.0 gcr.io/ivedha-training-409717/rajeevan-repo/sample_app:1.0 #tagging the pulled image with your gcr.io project id and creating a new repository and image name
+          - docker push gcr.io/ivedha-training-409717/rajeevan-repo/sample_app:1.0 #pushing the image to gcr.io
+
+    - step:
+        name: upload to artifact registry          
+        image: google/cloud-sdk:latest
+        script:
+          - docker pull rajeevany/sample_app2:1.0
+          - echo $GCP_SERVICE_ACCOUNT_KEY > key.json  #write whats inside the variable $GCP_SERVICE_ACCOUNT_KEY to a file called gcloud-service-key.json
+          - gcloud auth activate-service-account --key-file=key.json  #activate the service account with the above key file
+          - gcloud auth configure-docker us-central1-docker.pkg.dev --quiet  #configure docker to use artifact registry in the us-central1 region
+          - docker tag rajeevany/sample_app2:1.0 us-central1-docker.pkg.dev/ivedha-training-409717/test02/sample_app:1.0 #tag and push
+          - docker push us-central1-docker.pkg.dev/ivedha-training-409717/test02/sample_app:1.0
+
+    - step:
+        name: deploy          
+        image: google/cloud-sdk:latest
+        script:
+        # gcloud auth
+          - echo $GCP_SERVICE_ACCOUNT_KEY > key.json
+          - gcloud auth activate-service-account --key-file=key.json
+          - gcloud config set project ivedha-training-409717 #set the project id
+        #cloud run
+          - gcloud run deploy app01 --image us-central1-docker.pkg.dev/ivedha-training-409717/test02/sample_app:1.0 --service-account cicd-training@ivedha-training-409717.iam.gserviceaccount.com --platform managed --region us-central1 --allow-unauthenticated
+          #Deploys the specified Docker image to Cloud Run in the specified region (this is the service account name  )
+
+  
+  
+    
+
